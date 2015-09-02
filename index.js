@@ -3,6 +3,12 @@
 
 var GithubAdapter = require('./lib/github');
 
+var nothing = function() {
+  return {
+    upload: function() {}
+  }
+}
+
 module.exports = {
   name: 'ember-deploy-github',
   type: 'ember-deploy-addon',
@@ -11,13 +17,7 @@ module.exports = {
       'github': GithubAdapter
     },
     index: {
-      'github': function() {
-          return {
-            upload: function() {
-
-            }
-          }
-      }
+      'github': nothing
     }
   }
 };
