@@ -39,7 +39,10 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "core-object": "^1.1.0",
+    "ember-cli-babel": "^5.0.0",
+    "nodegit": "^0.4.1",
+    "silent-error": "^1.0.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

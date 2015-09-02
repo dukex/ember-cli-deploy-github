@@ -1,17 +1,23 @@
 /* jshint node: true */
 'use strict';
 
-
+var GithubAdapter = require('./lib/github');
 
 module.exports = {
   name: 'ember-deploy-github',
   type: 'ember-deploy-addon',
   adapters: {
     assets: {
-      'github': S3Adapter
+      'github': GithubAdapter
     },
     index: {
-      'github': S3Adapter
+      'github': function() {
+          return {
+            upload: function() {
+
+            }
+          }
+      }
     }
   }
 };
