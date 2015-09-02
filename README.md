@@ -1,6 +1,30 @@
 # Ember-deploy-github
 
-This README outlines the details of collaborating on this Ember addon.
+This is the github-adapter implementation to use [github pages](https://pages.github.com/) with
+[ember-deploy](https://github.com/levelbossmike/ember-deploy), for index and asset management.
+
+## `deploy.js`
+
+```
+module.exports = {
+  development: {
+    store: {
+      type: "github",
+    },
+
+    assets: {
+      type: "github",
+      branch: "master", // default is gh-pages
+      repository: "git@github.com:user/repo.git",
+    }
+  }
+}
+```
+
+## note about push
+
+The current version will always make with push with force(```--force```)
+
 
 ## Installation
 
