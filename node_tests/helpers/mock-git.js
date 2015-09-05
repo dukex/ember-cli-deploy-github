@@ -3,19 +3,19 @@ var nodegit = require('nodegit');
 
 var mock = Object.create(nodegit);
 
-mock.Remote = remoteMock = {
+mock.Remote = gitMock = remoteMock = {
   called: null,
   create: function(repo, remote, repositoryURL){
     nodegit.Remote.create(repo, remote, repositoryURL)
-    remoteMock.repo = repo;
+    global.gitMock.repo = repo;
     return remoteMock;
   },
   push: function() {
-    remoteMock.called = arguments;
+    global.gitMock.called = arguments;
     return remoteMock;
   },
   setCallbacks: function() {
-    
+
   }
 }
 
