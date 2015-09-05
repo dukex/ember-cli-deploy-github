@@ -4,10 +4,6 @@ node_js:
   - "0.12"
   - "iojs"
 
-cache:
-  directories:
-    - node_modules
-
 matrix:
   fast_finish: true
 
@@ -15,8 +11,8 @@ before_install:
   - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
   - "npm config set spin false"
   - "npm install -g npm@^2"
-  - sudo apt-get install glibc-2.10-1 -y;
-  - sudo apt-get install libstdc++6 -y;
+  - wget http://launchpadlibrarian.net/137699828/libc6_2.17-0ubuntu5_amd64.deb
+  - sudo dpkg -i libc6_2.17-0ubuntu5_amd64.deb
 
 install:
   - npm install
