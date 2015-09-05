@@ -1,7 +1,7 @@
 {
-  "name": "ember-deploy-github",
+  "name": "ember-cli-deploy-github",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember deploy adapter to deploy your app to github pages.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -9,7 +9,8 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "./node_modules/mocha/bin/mocha node_tests/**/*-test.js"
+    "test": "./node_modules/mocha/bin/mocha node_tests/***/*",
+    "autotest": "./node_modules/mocha/bin/mocha node_tests/***/* -w"
   },
   "repository": "",
   "engines": {
@@ -24,28 +25,26 @@
     "ember-cli-app-version": "0.3.3",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.0.0",
-    "ember-cli-htmlbars": "0.7.9",
-    "ember-cli-ic-ajax": "0.1.1",
-    "ember-cli-inject-live-reload": "^1.3.0",
     "ember-cli-qunit": "0.3.13",
     "ember-cli-release": "0.2.3",
-    "ember-cli-uglify": "^1.0.1",
-    "ember-data": "1.0.0-beta.18",
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "ember-try": "0.0.6",
     "mocha": "^2.3.0",
+    "pleasant-progress": "^1.1.0",
     "rimraf": "^2.4.3"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli-deploy-plugin"
   ],
   "dependencies": {
     "core-object": "^1.1.0",
     "ember-cli-babel": "^5.0.0",
-    "nodegit": "^0.4.1",
-    "silent-error": "^1.0.0"
+    "ember-cli-deploy": "https://github.com/ember-cli/ember-cli-deploy.git#0.5.0-dev",
+    "ember-cli-deploy-plugin": "^0.1.3",
+    "nodegit": "^0.4.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
