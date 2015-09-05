@@ -1,7 +1,7 @@
 {
   "name": "ember-deploy-github",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember deploy adapter to deploy your app to github pages.",
   "directories": {
     "doc": "doc",
     "test": "tests"
