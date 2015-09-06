@@ -49,7 +49,7 @@ describe('adapter', function() {
     it("correct configure", function() {
       var plugin = adapter.createDeployPlugin({name: 'test'});
       plugin.beforeHook({ui: ui, config: {
-        test: { repository: 'test-repo' }
+        test: { repository: 'test-repo', distDir: testPath }
       }});
       plugin.configure();
       expect(plugin.name).to.be.eq("test");

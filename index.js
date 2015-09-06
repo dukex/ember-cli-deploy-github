@@ -13,6 +13,9 @@ module.exports = {
         branch: 'gh-pages',
         gitClient: function(context) {
           return require('nodegit');
+        },
+        distDir: function(context) {
+          return context.distDir;
         }
       },
       requiredConfig: ['repository'],
@@ -22,7 +25,8 @@ module.exports = {
         var git = this.readConfig('gitClient');
         this.uploader = new Uploader(git, {
           branch:     this.readConfig('branch'),
-          repository: this.readConfig('repository')
+          repository: this.readConfig('repository'),
+          distDir:    this.readConfig('distDir')
         });
       },
       upload: function (context) {
