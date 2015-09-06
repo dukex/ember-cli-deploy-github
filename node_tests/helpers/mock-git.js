@@ -6,16 +6,22 @@ var mock = Object.create(nodegit);
 mock.Remote = gitMock = remoteMock = {
   called: null,
   create: function(repo, remote, repositoryURL){
-    nodegit.Remote.create(repo, remote, repositoryURL)
+    var result = nodegit.Remote.create(repo, remote, repositoryURL)
     global.gitMock.repo = repo;
-    return remoteMock;
+    // return mock only when original create method returns something, it's necessary to emulate a empty retult
+    return result ? remoteMock : result;
   },
   push: function() {
     global.gitMock.called = arguments;
     return remoteMock;
   },
-  setCallbacks: function() {
-
+  lookup: function (repo, remote) {
+    return remoteMock;
+  },
+  setCallbacks: function(options) {
+    if(options && options.credentials) {
+      options.credentials(null, 'username');
+    }
   }
 }
 

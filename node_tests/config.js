@@ -1,7 +1,7 @@
 module.exports =function(target) {
   var ENV = {
     "github": {
-      repository: "my-test-repo.git",
+      repository: "git://repo/my-test-repo.git",
       gitClient: require('./helpers/mock-git')
     }
   };
