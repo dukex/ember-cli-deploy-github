@@ -25,12 +25,12 @@ module.exports = {
         var git = this.readConfig('gitClient');
         this.uploader = new Uploader(git, {
           branch:     this.readConfig('branch'),
-          repository: this.readConfig('repository'),
-          distDir:    this.readConfig('distDir')
+          repository: this.readConfig('repository')
         });
+        return {dad: 224}
       },
       upload: function (context) {
-        return this.uploader.upload();
+        return this.uploader.upload(this.readConfig('distDir'));
       }
     });
     return new DeployPlugin();
