@@ -20,7 +20,10 @@ module.exports = {
         DeployPluginBase.prototype.configure.apply(this, arguments);
 
         var git = this.readConfig('gitClient');
-        this.uploader = new Uploader(git, context);
+        this.uploader = new Uploader(git, {
+          branch:     this.readConfig('branch'),
+          repository: this.readConfig('repository')
+        });
       },
       upload: function (context) {
         return this.uploader.upload();
