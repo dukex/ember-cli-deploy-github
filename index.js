@@ -14,7 +14,7 @@ module.exports = {
       },
       requiredConfig: ['repository'],
       upload: function (context) {
-        this.git = context.config.git || require('nodegit');
+        this.git = this.readConfig('git') || require('nodegit');
         var uploader = new Uploader(this.git, context);
         return uploader.upload();
       }
