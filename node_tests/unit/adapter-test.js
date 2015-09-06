@@ -85,7 +85,7 @@ describe('adapter', function() {
         expect(message).to.eq('Push to master');
         done();
       }).catch(function (err) {
-        done(err);
+        done(err || new Error('failed: catch without err'));
       });
     });
   });
