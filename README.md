@@ -3,6 +3,10 @@
 This is the github-adapter implementation to deploy your ember app to [Github Pages](https://pages.github.com/) with
 [ember-cli-deploy](https://github.com/ember-cli/ember-cli-deploy).
 
+<hr/>
+**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
+<hr/>
+
 TODO: link to example app
 
 ## Use
