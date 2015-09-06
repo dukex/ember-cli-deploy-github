@@ -15,7 +15,7 @@ var ui = new UI({
     ci: true
 });
 
-var testPath = 'tmp/assets-sync';
+var testPath = 'tmp/deploy-dist';
 var addon = adapter;
 addon.pkg = { keywords: ['ember-cli-deploy-plugin'] };
 
