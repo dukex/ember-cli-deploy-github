@@ -1,5 +1,5 @@
 {
-  "name": "ember-deploy-github",
+  "name": "ember-cli-deploy-github",
   "version": "0.1.0",
   "description": "Ember deploy adapter to deploy your app to github pages.",
   "directories": {

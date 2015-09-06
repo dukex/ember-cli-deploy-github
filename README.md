@@ -1,10 +1,15 @@
-# Ember-deploy-github [![Build Status](https://travis-ci.org/dukex/ember-deploy-github.svg)](https://travis-ci.org/dukex/ember-deploy-github)
+# ember-cli-deploy-github [![Build Status](https://travis-ci.org/dukex/ember-cli-deploy-github.svg)](https://travis-ci.org/dukex/ember-cli-deploy-github)
 
-This is the github-adapter implementation to use [github pages](https://pages.github.com/) with
-[ember-deploy](https://github.com/levelbossmike/ember-deploy), for index and asset management.
+This is the github-adapter implementation to deploy your ember app to [Github Pages](https://pages.github.com/) with
+[ember-cli-deploy](https://github.com/ember-cli/ember-cli-deploy).
 
-## `deploy.js`
+TODO: link to example app
 
+## Configure
+
+TODO: add steps to configure using 0.5 API
+
+TODO: fix i
 ```
 module.exports = {
   development: {
