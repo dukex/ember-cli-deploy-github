@@ -10,13 +10,20 @@ module.exports = {
     var DeployPlugin = DeployPluginBase.extend({
       name: options.name,
       defaultConfig: {
-        branch: 'gh-pages'
+        branch: 'gh-pages',
+        gitClient: function(context) {
+          return require('nodegit');
+        }
       },
       requiredConfig: ['repository'],
+      configure: function(context) {
+        DeployPluginBase.prototype.configure.apply(this, arguments);
+
+        var git = this.readConfig('gitClient');
+        this.uploader = new Uploader(git, context);
+      },
       upload: function (context) {
-        this.git = this.readConfig('git') || require('nodegit');
-        var uploader = new Uploader(this.git, context);
-        return uploader.upload();
+        return this.uploader.upload();
       }
     });
     return new DeployPlugin();
