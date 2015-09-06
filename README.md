@@ -5,31 +5,45 @@ This is the github-adapter implementation to deploy your ember app to [Github Pa
 
 TODO: link to example app
 
-## Configure
+## Use
 
-TODO: add steps to configure using 0.5 API
+* Install ```ember-cli-deploy-build``` plugin
 
-TODO: fix i
 ```
-module.exports = {
-  development: {
-    store: {
-      type: "github",
-    },
+$ ember install ember-cli-deploy-build
+```
 
-    assets: {
-      type: "github",
-      branch: "master", // default is gh-pages
-      repository: "git@github.com:user/repo.git",
+* Install this plugin
+
+```
+$ ember install ember-cli-deploy-github
+```
+
+* Configure deploy.js file like the follow example:
+
+```
+module.exports = function(target) {
+  var ENV = {
+    github: {
+      repository: 'put-your-repo-url-here.git',
+      branch: 'gh-pages' // opcional, gh-pages is defualt
     }
-  }
+  };
+
+  return ENV;
 }
 ```
 
-## note about push
+* Run pipeline
 
-The current version will always make with push with force(```--force```)
+```
+$ ember deploy
+```
 
+## Warnings
+
+The current version will always make deploy using push with force(```--force```),
+that is, any previous manual changes on deploy branch will be lost.
 
 ## Installation
 
