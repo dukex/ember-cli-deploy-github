@@ -7,8 +7,6 @@ This is the github-adapter implementation to deploy your ember app to [Github Pa
 **WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
 <hr/>
 
-TODO: link to example app
-
 ## Use
 
 * Install ```ember-cli-deploy-build``` plugin
