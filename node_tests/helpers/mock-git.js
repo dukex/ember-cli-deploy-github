@@ -8,7 +8,7 @@ mock.Remote = gitMock = remoteMock = {
   create: function(repo, remote, repositoryURL){
     var result = nodegit.Remote.create(repo, remote, repositoryURL)
     global.gitMock.repo = repo;
-    // return mock only when original create method returns something, it's necessary to emulate a empty retult
+    // return mock only when original method returns something, it's necessary to emulate a empty result
     return result ? remoteMock : result;
   },
   push: function() {
