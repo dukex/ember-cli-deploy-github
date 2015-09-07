@@ -59,19 +59,21 @@ For detailed information on how configuration of plugins works, please refer to 
 
 ### branch
 
-The target branch on remote repository where the plugin will push app. By default the plugin use ```gh-pages```, for more information about branch please refer to [Github Pages](https://pages.github.com/)
+The target branch on remote repository where the plugin will push app. By default the plugin uses ```gh-pages```, for more information about branch please refer to [Github Pages](https://pages.github.com/)
 
 Default: ```gh-pages```
 
 ### repository
 
-The repository the plugin will push your app.
+The repository to which the plugin will push your app.
+
+TODO: add examples
 
 Default: ```undefined```
 
 ### distDir
 
-The root directory where the your app was builded. By default, this option will use the distDir property of the deployment context, provided by [ember-cli-deploy-build](https://github.com/zapnito/ember-cli-deploy-build).
+The root directory where your app was built. By default, this option will use the distDir property of the deployment context, provided by [ember-cli-deploy-build](https://github.com/zapnito/ember-cli-deploy-build).
 
 Default: ```context.distDir```
 
@@ -83,9 +85,8 @@ The following properties are expected to be present on the deployment context ob
 
 ## Plugin Warnings
 
-The current version will always make deploy using push with force(```--force```),
+The current version will always deploy using a force push(i.e. ```git push --force```),
 that is, any previous manual changes on deploy branch will be lost.
-
 
 
 ## Running Tests
