@@ -82,7 +82,7 @@ describe('adapter', function() {
         expect(branch).to.eq('+refs/heads/master:refs/heads/gh-pages');
         expect(options).to.eq(null);
         expect(signature).to.eql(remote.repo.defaultSignature());
-        expect(message).to.eq('Push to master');
+        expect(message).to.eq('Push to gh-pages');
         done();
       }).catch(function (err) {
         done(err || new Error('failed: catch without err'));
@@ -106,7 +106,7 @@ describe('adapter', function() {
         var message = remote.called[3];
         expect(branch).to.eq('+refs/heads/master:refs/heads/gh-pages');
         expect(options).to.eq(null);
-        expect(message).to.eq('Push to master');
+        expect(message).to.eq('Push to gh-pages');
         done();
       }).catch(function (err) {
         done(err || new Error('failed: catch without err'));
