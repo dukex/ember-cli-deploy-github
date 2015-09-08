@@ -22,19 +22,12 @@ module.exports = {
       configure: function(context) {
         DeployPluginBase.prototype.configure.apply(this, arguments);
 
-        var options = {
-          branch:     this.readConfig('branch'),
-          repository: this.readConfig('repository')
-        };
-
-        var logger = this.log.bind(this);
-
-        var git = this.readConfig('gitClient');
-        this.uploader = new Uploader(git, options, logger);
-        this.log('configuring deploy to ' + options.repository + ' branch ' + options.branch)
+        this.uploader = new Uploader({
+          plugin: this
+        });
       },
       upload: function (context) {
-        return this.uploader.upload(this.readConfig('distDir'));
+        return this.uploader.upload();
       }
     });
     return new DeployPlugin();
