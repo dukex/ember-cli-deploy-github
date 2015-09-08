@@ -65,11 +65,15 @@ Default: ```gh-pages```
 
 ### repository
 
-The repository to which the plugin will push your app.
+The repository url to which the plugin will push your app. Just the `ssh` url is accepted
 
-TODO: add examples
+Example:
+* `git@github.com:<username>/<reponame>.git`
+
 
 Default: ```undefined```
+
+
 
 ### distDir
 
