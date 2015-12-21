@@ -1,5 +1,7 @@
 # Ember-deploy-github [![Build Status](https://travis-ci.org/dukex/ember-deploy-github.svg)](https://travis-ci.org/dukex/ember-deploy-github)
 
+[![](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-deploy-github.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
+
 This is the github-adapter implementation to use [github pages](https://pages.github.com/) with
 [ember-deploy](https://github.com/levelbossmike/ember-deploy), for index and asset management.
 
